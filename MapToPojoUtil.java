@@ -11,7 +11,7 @@ import java.util.Map;
  *
  */
 public class MapToPojoUtil {
-	public static String mapToClassSimple(String className, Map<String, Object> map)
+	public static String mapToClass(String className, Map<String, Object> map)
 	{
 		String classCode = "public class " + className + " {\n";
 		for(String key: map.keySet())
@@ -26,9 +26,9 @@ public class MapToPojoUtil {
 		return classCode + "}";
 	}
 	
-	public static String mapToClassSimple(String className, String packageName, Map<String, Object> map)
+	public static String mapToClass(String className, String packageName, Map<String, Object> map)
 	{
-		return "package " + packageName + ";\n\n" + mapToClassSimple(className, map);
+		return "package " + packageName + ";\n\n" + mapToClass(className, map);
 	}
 	
 	private MapToPojoUtil() {}
