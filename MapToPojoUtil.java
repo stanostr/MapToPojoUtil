@@ -17,7 +17,7 @@ public class MapToPojoUtil {
 		for(String key: map.keySet())
 		{
 			if(map.get(key)!=null)
-				classCode = classCode + "\t" + "private " + map.get(key).getClass().getCanonicalName()
+				classCode = classCode + "\t" + "private " + map.get(key).getClass().getName()
 					+ " " + key + ";\n";
 			else
 				classCode = classCode + "\t" + "private Object " + key + ";\n";
